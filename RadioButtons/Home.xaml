@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioButtons.Home"
+             xmlns:custom="clr-namespace:RadioButtons.CustomControls;assembly=RadioButtons">
+
+  <StackLayout>
+    <Label Text="TEST" FontSize="72" />
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Label Text="Number of Tests" Grid.Row="0" Grid.Column="0"/>
+      <custom:BindableRadioButtonGroup x:Name="RadioGroupTestCount" ItemsSource="{Binding Path=TestRadiobuttonList.Values}" SelectedIndex="{Binding NumberOfTests, Mode=TwoWay}" Orientation="Horizontal" VerticalOptions="Start" Grid.Row="1" Grid.Column="0"/>
+    </Grid>
+  </StackLayout>
+  
+</ContentPage>
